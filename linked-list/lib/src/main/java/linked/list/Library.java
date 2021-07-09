@@ -9,7 +9,20 @@ public class Library {
      ls.insert(11);
      ls.insert(12);
      System.out.println(ls);
+     // check append method
+     ls.append(1);
+     ls.append(2);
+     ls.append(3);
+     System.out.println(ls);
 
+
+     // check insertBefore method
+        ls.insertBefore(11,4);
+        System.out.println(ls);
+
+     // check insertAfter method
+        ls.insertAfter(10,4);
+        System.out.println(ls);
 
         // Search in linked list
          if(ls.search(ls.head,20)){
