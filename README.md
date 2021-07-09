@@ -1,11 +1,11 @@
-#401-data-structures-and-algorithms
+# 401-data-structures-and-algorithms
 
-##Challenges 
+## Challenges 
 
 
-###Table of contents:
+### Table of contents:
 | Challenges  | URl |
 |---|---|
-| Reverse Array | [URL](array-reverse)  | 
-| array insert-shift  |[URL]()   |  
-|   |   |  
+| Reverse Array | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/Reverse_Array)  | 
+| array insert-shift  |[URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/array-insert-shift)   |  
+|binary Search   | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/array-binary-search)  |  
