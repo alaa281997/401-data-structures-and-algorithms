@@ -58,4 +58,54 @@ public class Linkedlist {
         return "List: " + result;
     }
 
+    /*Code Challenge 6 Linked List insertions*/
+
+    public void append (int value) {
+        Node newNode = new Node(value);
+        if(this.head != null) {
+            Node tmp = head;
+            while (tmp.next != null) {
+                tmp = tmp.next;
+            }
+            tmp.next = newNode;
+        }
+        else {
+           head = newNode;
+        }
+        size++;
+
+    }
+
+    public void insertBefore(int value , int newValue){
+        Node newNode = new Node(newValue);
+        if(this.head != null) {
+            Node crr = head;
+           if (crr.next.value == value && crr.next != null){
+                newNode.next = crr.next;
+                crr.next = newNode;
+            }
+        }
+        else {
+            head = newNode;
+        }
+        size++;
+    }
+    public void insertAfter(int value ,int newValue){
+        Node newNode = new Node(newValue);
+        if(this.head == null) {
+            head = newNode;
+        }
+        else {
+            Node tmp = head;
+            while (tmp.value != value && tmp.next != null) {
+                tmp = tmp.next;
+            }
+            if (tmp.value == value) {
+                newNode.next = tmp.next;
+                tmp.next = newNode;
+            }
+        }
+        size++;
+
+    }
 }
