@@ -10,6 +10,7 @@ Challenge 6 create 3 methods first method we need to add new to the end of the l
 ## Approach & Efficiency
  Linked list insertion : time O(1) / space : O(n)
 ## API
+![Whiteboard](c6.png)
 Insert(): to insert nw node in the list.
 Search(): to check if the element inside the list.
 toString(): override method to returns a String representation.
