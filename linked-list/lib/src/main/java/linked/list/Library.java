@@ -10,10 +10,5 @@ public class Library {
         ls.insert(5);
         ls.insertBefore(5 , 1);
         System.out.println(ls);
-//        ls.append(12);
-//        ls.insertAfter(4 , 9);
-//        ls.insertBefore(12 , 5);
-//        System.out.println(ls.search(20));
-//        System.out.println(ls.head.value);
     }
 }
