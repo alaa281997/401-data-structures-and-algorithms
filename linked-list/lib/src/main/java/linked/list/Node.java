@@ -1,13 +1,9 @@
 package main.java.linked.list;
-
-public class Node {
-    public int value;
+public class Node<T> {
     public Node next;
-
-    public Node(int value) {
+    public T value;
+    public Node(T value) {
         this.value = value;
         this.next = null;
     }
-
-
 }

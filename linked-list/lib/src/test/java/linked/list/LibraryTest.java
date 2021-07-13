@@ -3,26 +3,62 @@
  */
 package test.java.linked.list;
 
-import main.java.linked.list.Library;
 import main.java.linked.list.Node;
 import org.junit.Test;
 
-import java.util.LinkedList;
-import  main.java.linked.list.Linkedlist;
+import main.java.linked.list.LinkedList;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    Linkedlist ls = new Linkedlist(new Node(10));
+
     @Test
-    public void testInsert() {
-        ls.insert(11);
-        ls.insert(12);
-        assertEquals(2 , ls.size);
+    public void testEmpty() {
+        LinkedList<Integer> ls = new LinkedList<>();
+        Assertions.assertTrue( ls.size >= 0 ,"Return true if linked list is initialized and have length");
+    }
+
+    @Test
+    public void testAppendforOne() {
+        LinkedList<Integer> ls = new LinkedList<>();
+        ls.append(15);
+        Assertions.assertTrue( ls.size == 1 ,"only one");
+    }
+    @Test
+    public void testAppend() {
+        LinkedList<Integer> ls = new LinkedList<>();
+        ls.append(10);
+        ls.append(11);
+        ls.append(12);
+        Assertions.assertEquals("List: {10} -> {11} -> {12} -> Null" , String.valueOf(ls));
+    }
+
+    @Test
+    public void testInsertBefore() {
+        LinkedList<Integer> ls = new LinkedList<>();
+        ls.append(10);
+        ls.append(11);
+        ls.append(13);
+        ls.insertBefore(13 , 12);
+        Assertions.assertEquals("List: {10} -> {11} -> {12} -> {13} -> Null" , String.valueOf(ls));
+    }
+    @Test
+    public void testInsertAfter() {
+        LinkedList<Integer> ls = new LinkedList<>();
+        ls.append(10);
+        ls.append(11);
+        ls.append(12);
+        ls.insertAfter(12 , 13);
+        Assertions.assertEquals("List: {10} -> {11} -> {12} -> {13} -> Null" , String.valueOf(ls));
     }
 
     @Test
     public void testSearch() {
-        ls.search(ls.head, 10);
-        assertFalse(false);
+        LinkedList<Integer> ls = new LinkedList<>();
+        ls.append(10);
+        Assertions.assertTrue( ls.search(10));
     }
+
 }
