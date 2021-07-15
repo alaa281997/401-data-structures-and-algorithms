@@ -1,3 +1,4 @@
+
 package main.java.linked.list;
 public class Node<T> {
     public Node next;

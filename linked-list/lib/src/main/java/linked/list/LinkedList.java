@@ -69,7 +69,7 @@ public class LinkedList <T>{
     public boolean search(T value)
     {
         Node<T> node = head;
-      while(node != null)
+        while(node != null)
         {
             if (node.value == value)
                 return true;
@@ -78,6 +78,25 @@ public class LinkedList <T>{
         }
         return false;
 
+    }
+
+
+    // Code challenge 7
+    public T kthFromEnd(int k){
+        Node<T> temp = head;
+        int newValue = size - 1 - k;
+        int current = 0;
+        if(k >= size || k < 0){
+            return null;
+        }else if (newValue == current){
+            return temp.value;
+        }else {
+            while (newValue != current){
+                temp = temp.next;
+                current++;
+            }
+            return temp.value;
+        }
     }
 
     public String toString(){
@@ -94,3 +113,4 @@ public class LinkedList <T>{
         return "List: " + result;
     }
 }
+

@@ -58,7 +58,17 @@ public class LibraryTest {
     public void testSearch() {
         LinkedList<Integer> ls = new LinkedList<>();
         ls.append(10);
-        Assertions.assertTrue( ls.search(10));
+        Assertions.assertTrue(ls.search(10));
     }
-
+    @Test
+    public void kthTest(){
+        LinkedList<Integer> testList = new LinkedList<>();
+        testList.insert(1);
+        testList.insert(2);
+        testList.insert(3);
+        testList.insert(4);
+        Assertions.assertEquals(2,testList.kthFromEnd(1));
+        Assertions.assertNull(testList.kthFromEnd(10));
+    }
 }
+
