@@ -10,6 +10,7 @@ import main.java.linked.list.LinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 
+import static main.java.linked.list.LinkedList.zipLists;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
@@ -70,5 +71,28 @@ public class LibraryTest {
         Assertions.assertEquals(2,testList.kthFromEnd(1));
         Assertions.assertNull(testList.kthFromEnd(10));
     }
+
+
+    @Test
+    public void zipListsTest(){
+        LinkedList<Integer> linkedList1 = new LinkedList<>();
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+
+        linkedList1.insert(1);
+        linkedList1.insert(2);
+        linkedList1.insert(3);
+
+        linkedList2.insert(4);
+        linkedList2.insert(5);
+        linkedList2.insert(6);
+
+        Assertions.assertEquals(3, linkedList1.size);
+        Assertions.assertEquals(3, linkedList2.size);
+        Assertions.assertEquals(6, zipLists(linkedList1, linkedList2).size);
+        Assertions.assertEquals("List: {3} -> {6} -> {2} -> {5} -> {1} -> {4} -> Null" ,
+                zipLists(linkedList1, linkedList2).toString());
+
+    }
+
 }
 

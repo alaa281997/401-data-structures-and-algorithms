@@ -100,6 +100,36 @@ public class LinkedList <T>{
         }
     }
 
+    // code challenge 8
+
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2){
+        int size;
+        Node n1 = list1.head;
+        Node n2 = list2.head;
+        LinkedList zipLists = new LinkedList();
+
+        if(list1.size > list2.size){
+            size = list1.size;
+        }else if(list1.size< list2.size){
+            size = list2.size;
+        }else{
+            size = list1.size;
+        }
+        while (size > 0){
+            if(n1 != null){
+                zipLists.append(n1.value);
+                n1 = n1.next;
+            }
+            if(n2 != null){
+                zipLists.append(n2.value);
+                n2 = n2.next;
+            }
+            size --;
+        }
+        return zipLists;
+    }
+
+    
     public String toString(){
         String result = "";
         Node n = head;
