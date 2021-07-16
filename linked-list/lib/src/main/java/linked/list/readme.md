@@ -19,6 +19,10 @@ Code challenge 7:
 
 ![Whiteboard](c7.png)
 
+Code challenge 8:
+
+![Whiteboard](c8.png)
+
 
 
 
@@ -31,3 +35,5 @@ insertBefore(): to add before specific element.
 insertAfter(): to add after specific element.
 
 kthFromEnd(): search the index from the end of Linked List
+
+zipList(): merge two linkedlist together 
