@@ -12,12 +12,14 @@ public class AppTest {
     private static final StackLinkedList<Integer> testStack = new StackLinkedList<>();
     private static final QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
 
+
     @Test
     public void testStackPush() {
-        testStack.push(1);
-        testQueue.enqueue(1);
-        assertEquals("Error with Stack Insertion:\n ", "{ 1 } -> NULL", String.valueOf(testStack));
-    }
+    testStack.push(1);
+    testQueue.enqueue(1);
+    assertEquals("Error with Stack Insertion:\n ", "{ 1 } -> NULL", String.valueOf(testStack));
+}
+
 
     @Test
     public void testMultiplePush() {
