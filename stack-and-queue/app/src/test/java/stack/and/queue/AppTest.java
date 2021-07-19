@@ -5,13 +5,14 @@ package test.java.stack.and.queue;
 
 import main.java.stack.and.queue.QueueLinkedList;
 import main.java.stack.and.queue.StackLinkedList;
+import main.java.stack.and.queue.pseudoQueue;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    private static final StackLinkedList<Integer> testStack = new StackLinkedList<>();
-    private static final QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
-
+    StackLinkedList<Integer> testStack = new StackLinkedList<>();
+    QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
+    pseudoQueue<Integer> testPseudoQueue = new pseudoQueue<>();
 
     @Test
     public void testStackPush() {
@@ -130,5 +131,37 @@ public class AppTest {
                 -2147483648,
                 testStack.peek()
         );
+    }
+
+    @Test
+    public void testHappyPath() {
+        testPseudoQueue.enqueue(1);
+        testPseudoQueue.enqueue(2);
+        testPseudoQueue.enqueue(3);
+        testPseudoQueue.enqueue(4);
+        assertEquals(
+                "Error adding in queue:\n ","{ 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL", String.valueOf(testPseudoQueue)
+        );
+    }
+
+    @Test
+    public void testError() {
+        assertEquals("Error Empty delete:\n ", 1,testPseudoQueue.dequeue());
+
+        testPseudoQueue.dequeue();
+        testPseudoQueue.dequeue();
+
+    }
+
+    @Test
+    public void testEdge() {
+
+        testPseudoQueue.enqueue(5);
+        assertEquals(
+                "Error enq:\n ",
+                "{ 5 } -> NULL",
+                String.valueOf(testPseudoQueue) );
+        testPseudoQueue.dequeue();
+
     }
 }

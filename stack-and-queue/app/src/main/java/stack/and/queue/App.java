@@ -7,6 +7,8 @@ public class App {
 
     public static void main(String[] args) {
         StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
+        pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
+
         // Stack
         System.out.println("stackList: " + stackList);
         stackList.push(1);
@@ -36,5 +38,22 @@ public class App {
         System.out.println("queueList.isEmpty(): " + queueList.isEmpty());
         // dequeue front element in queue
         System.out.println("dequeue:"+queueList.dequeue());
+
+       // Stack in queue pseudoQueue
+
+        pseudoQueueList.enqueue(1);
+        pseudoQueueList.enqueue(2);
+        pseudoQueueList.enqueue(3);
+        pseudoQueueList.enqueue(4);
+        pseudoQueueList.enqueue(5);
+        pseudoQueueList.enqueue(6);
+        pseudoQueueList.enqueue(7);
+
+        System.out.println(pseudoQueueList);
+
+        System.out.println("dequeue first: " + pseudoQueueList.dequeue());
+        System.out.println("dequeue second: " + pseudoQueueList.dequeue());
+
+
     }
 }
