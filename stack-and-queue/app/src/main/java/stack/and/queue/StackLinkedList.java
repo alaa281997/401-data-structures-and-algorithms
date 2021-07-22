@@ -14,22 +14,21 @@ public class StackLinkedList<T> {
     }
 
     public int pop() {
-        int popped = 0;
+        int popElement = 0;
         if (top == null)
-            System.out.println("Empty");
+            System.out.println("Stack is Empty");
         else {
-            popped = top.data;
+            popElement = (int) top.data;
             top = top.next;
         }
-        return popped;
+        return popElement;
     }
-
     public int peek() {
         if (top == null) {
-            System.out.print("Empty");
-            return Integer.MIN_VALUE;
+            System.out.print(" empty stack ");
+            return 0;
         } else
-            return top.data;
+            return (int) top.data;
     }
     public boolean isEmpty() {
         return top == null;
