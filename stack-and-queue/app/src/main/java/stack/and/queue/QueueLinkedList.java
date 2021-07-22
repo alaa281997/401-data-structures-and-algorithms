@@ -1,13 +1,13 @@
 package main.java.stack.and.queue;
 
 public class QueueLinkedList<T> {
-    public Node front, rear;
+    public Node<T> front, rear;
 
     public QueueLinkedList() {
         this.front = this.rear = null;
     }
 
-    public void enqueue(int value) {
+    public void enqueue(T value) {
         Node newNode = new Node(value);
         if (this.rear == null) {
             this.front = this.rear = newNode;
@@ -17,20 +17,20 @@ public class QueueLinkedList<T> {
         this.rear = newNode;
     }
 
-    public int dequeue() {
+    public T dequeue() {
         if (this.front == null) {
             System.out.println("The queue is empty");
-            return Integer.MIN_VALUE;
+            return (T) "Empty";
         } else {
-            Node temp = this.front;
+            Node<T> temp = this.front;
             this.front = this.front.next;
             return temp.data;
         }
     }
-    public int peek() {
+    public T peek() {
         if (front == null) {
             System.out.println("Empty queue");
-            return Integer.MIN_VALUE;
+            return (T) "Empty";
         } else
             return front.data;
     }

@@ -9,51 +9,68 @@ public class App {
         StackLinkedList<Integer> stackList = new StackLinkedList<Integer>();
         pseudoQueue<Integer> pseudoQueueList = new pseudoQueue<>();
 
-        // Stack
-        System.out.println("stackList: " + stackList);
-        stackList.push(1);
-        stackList.push(2);
-        stackList.push(3);
-        // print stack
-        System.out.println("Stack List: " + stackList);
-        // print top
-        System.out.println(stackList.peek());
-        // return true or false if stack empty or not
-        System.out.println("stackList is Empty ? "+ stackList.isEmpty());
-         // pop the top of stack
-        System.out.println("pop:" + stackList.pop());
+//        // Stack
+//        System.out.println("stackList: " + stackList);
+//        stackList.push(1);
+//        stackList.push(2);
+//        stackList.push(3);
+//        // print stack
+//        System.out.println("Stack List: " + stackList);
+//        // print top
+//        System.out.println(stackList.peek());
+//        // return true or false if stack empty or not
+//        System.out.println("stackList is Empty ? "+ stackList.isEmpty());
+//         // pop the top of stack
+//        System.out.println("pop:" + stackList.pop());
+//
+//
+//        // Queue
+//
+//        QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
+//        // Add to queue
+//        queueList.enqueue(1);
+//        queueList.enqueue(2);
+//        queueList.enqueue(3);
+//
+//         // print queue list
+//        System.out.println("Queue list: " + queueList);
+//        // check queue is empty or not
+//        System.out.println("queueList.isEmpty(): " + queueList.isEmpty());
+//        // dequeue front element in queue
+//        System.out.println("dequeue:"+queueList.dequeue());
+//
+//       // Stack in queue pseudoQueue
+//
+//        pseudoQueueList.enqueue(1);
+//        pseudoQueueList.enqueue(2);
+//        pseudoQueueList.enqueue(3);
+//        pseudoQueueList.enqueue(4);
+//        pseudoQueueList.enqueue(5);
+//        pseudoQueueList.enqueue(6);
+//        pseudoQueueList.enqueue(7);
+//
+//        System.out.println(pseudoQueueList);
+//
+//        System.out.println("dequeue first: " + pseudoQueueList.dequeue());
+//        System.out.println("dequeue second: " + pseudoQueueList.dequeue());
+        AnimalShelter animalShelter = new AnimalShelter();
+
+        animalShelter.enqueue(new Cat("cat1"));
+        animalShelter.enqueue(new Cat("cat2"));
+        animalShelter.enqueue(new Cat("cat3"));
 
 
-        // Queue
+        animalShelter.enqueue(new Dog("dog1"));
+        animalShelter.enqueue(new Dog("dog2"));
+        animalShelter.enqueue(new Dog("dog3"));
 
-        QueueLinkedList<Integer> queueList = new QueueLinkedList<Integer>();
-        // Add to queue
-        queueList.enqueue(1);
-        queueList.enqueue(2);
-        queueList.enqueue(3);
+        System.out.println(animalShelter);
 
-         // print queue list
-        System.out.println("Queue list: " + queueList);
-        // check queue is empty or not
-        System.out.println("queueList.isEmpty(): " + queueList.isEmpty());
-        // dequeue front element in queue
-        System.out.println("dequeue:"+queueList.dequeue());
+        animalShelter.dequeue("cat");
+        animalShelter.dequeue("dog");
 
-       // Stack in queue pseudoQueue
 
-        pseudoQueueList.enqueue(1);
-        pseudoQueueList.enqueue(2);
-        pseudoQueueList.enqueue(3);
-        pseudoQueueList.enqueue(4);
-        pseudoQueueList.enqueue(5);
-        pseudoQueueList.enqueue(6);
-        pseudoQueueList.enqueue(7);
-
-        System.out.println(pseudoQueueList);
-
-        System.out.println("dequeue first: " + pseudoQueueList.dequeue());
-        System.out.println("dequeue second: " + pseudoQueueList.dequeue());
-
+        System.out.println(animalShelter);
 
     }
 }

@@ -12,6 +12,15 @@ Stack Space and time O(1), We always have a pointer to the top element, we add o
 
 Queue Space and time O(1), We usually have a pointer to the first and last element of the queue.
 
+PseudoQueue : 
+Enqueue :
+time and space complexity are both O(1) because we add only one element in the top of stack
+
+Dequeue : time and space complexity are  O(n) because transfering all items from first stack to second stack.
+## White boards
+PseudoQueue:
+
+![Whiteboard](c11.png)
 
 ## API
 Stack Class:
@@ -35,3 +44,9 @@ dequeue():delete elements from Queue.
 peek():return the top element in Queue.
 
 isEmpty():check if Queue empty.
+
+pseudoQueue class:
+
+enqueue(): push to stack
+
+dequeue(): delete the top elements in stack
