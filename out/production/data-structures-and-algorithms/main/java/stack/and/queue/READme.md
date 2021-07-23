@@ -17,10 +17,20 @@ Enqueue :
 time and space complexity are both O(1) because we add only one element in the top of stack
 
 Dequeue : time and space complexity are  O(n) because transfering all items from first stack to second stack.
+
+Animal Shelter :
+
+Space and Time for Enqueue and dequeue O(1)
+because add/delete from first element
+
 ## White boards
 PseudoQueue:
 
 ![Whiteboard](c11.png)
+
+Animal shelter:
+
+![Whiteboard](c12.png)
 
 ## API
 Stack Class:
@@ -50,3 +60,9 @@ pseudoQueue class:
 enqueue(): push to stack
 
 dequeue(): delete the top elements in stack
+
+Animal Shelter class:
+
+enqueue(): push to queue depending on cats or dogs
+
+dequeue(): delete first elements from queue

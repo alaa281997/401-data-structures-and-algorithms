@@ -12,6 +12,7 @@ public class AppTest {
     QueueLinkedList<Integer> testQueue = new QueueLinkedList<>();
     pseudoQueue<Integer> testPseudoQueue = new pseudoQueue<>();
     AnimalShelter animalShelter = new AnimalShelter();
+    Brackets brc = new Brackets();
     @Test
     public void testStackPush() {
     testStack.push(1);
@@ -186,5 +187,19 @@ public class AppTest {
         animalShelter.enqueue(new Dog("dog1"));
         animalShelter.dequeue("dog");
         assertEquals("AnimalShelter{{ catQueue=empty queue} ,{ dogQueue=empty queue}",animalShelter.toString());
+    }
+    @Test
+    public void TestBrackets() {
+        assertFalse(brc.bracketsMatch("[({}]"));
+        assertFalse(brc.bracketsMatch("(]("));
+        assertFalse(brc.bracketsMatch("{(})"));
+        assertFalse(brc.bracketsMatch("{"));
+        assertFalse(brc.bracketsMatch(")"));
+        assertFalse(brc.bracketsMatch("[}"));
+
+        assertTrue(brc.bracketsMatch("{}"));
+        assertTrue(brc.bracketsMatch("{}(){}"));
+        assertTrue(brc.bracketsMatch("()[[Extra Characters]]"));
+        assertTrue(brc.bracketsMatch("(){}[[]]"));
     }
 }
