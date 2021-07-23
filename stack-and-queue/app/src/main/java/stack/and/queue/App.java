@@ -53,24 +53,31 @@ public class App {
 //
 //        System.out.println("dequeue first: " + pseudoQueueList.dequeue());
 //        System.out.println("dequeue second: " + pseudoQueueList.dequeue());
-        AnimalShelter animalShelter = new AnimalShelter();
+//        AnimalShelter animalShelter = new AnimalShelter();
+//
+//        animalShelter.enqueue(new Cat("cat1"));
+//        animalShelter.enqueue(new Cat("cat2"));
+//        animalShelter.enqueue(new Cat("cat3"));
+//
+//
+//        animalShelter.enqueue(new Dog("dog1"));
+//        animalShelter.enqueue(new Dog("dog2"));
+//        animalShelter.enqueue(new Dog("dog3"));
+//
+//        System.out.println(animalShelter);
+//
+//        animalShelter.dequeue("cat");
+//        animalShelter.dequeue("dog");
+//
+//
+//        System.out.println(animalShelter);
 
-        animalShelter.enqueue(new Cat("cat1"));
-        animalShelter.enqueue(new Cat("cat2"));
-        animalShelter.enqueue(new Cat("cat3"));
+        Brackets brc = new Brackets();
 
-
-        animalShelter.enqueue(new Dog("dog1"));
-        animalShelter.enqueue(new Dog("dog2"));
-        animalShelter.enqueue(new Dog("dog3"));
-
-        System.out.println(animalShelter);
-
-        animalShelter.dequeue("cat");
-        animalShelter.dequeue("dog");
-
-
-        System.out.println(animalShelter);
+        System.out.println(brc.bracketsMatch("[({}]"));
+        System.out.println(brc.bracketsMatch("(]("));
+        System.out.println(brc.bracketsMatch("()[[Extra Characters]]"));
+        System.out.println(brc.bracketsMatch("(){}[[]]"));
 
     }
 }
