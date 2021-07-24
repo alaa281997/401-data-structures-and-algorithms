@@ -23,6 +23,10 @@ Animal Shelter :
 Space and Time for Enqueue and dequeue O(1)
 because add/delete from first element
 
+Brackets :
+
+Space and Time O(n) because we have for loop to check each element 
+
 ## White boards
 PseudoQueue:
 
@@ -31,6 +35,11 @@ PseudoQueue:
 Animal shelter:
 
 ![Whiteboard](c12.png)
+
+Brackets :
+
+![Whiteboard](c13.png)
+
 
 ## API
 Stack Class:
@@ -66,3 +75,9 @@ Animal Shelter class:
 enqueue(): push to queue depending on cats or dogs
 
 dequeue(): delete first elements from queue
+
+Brackets class :
+
+bracketsMatch(): boolean method to check if stack empty of brackets or not
+
+resources geeksforgeeks.org
