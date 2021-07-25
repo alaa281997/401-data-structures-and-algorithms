@@ -45,4 +45,10 @@ public class BinarySearchTree {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "BinarySearchTree{" +
+                "root=" + root.getKey() +
+                '}';
+    }
 }
