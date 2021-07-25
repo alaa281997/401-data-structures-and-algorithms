@@ -4,9 +4,14 @@ A tree is a nonlinear data structure, compared to arrays, linked lists, stacks a
 ## Challenge
 We need to use our knowledge to create binary tree and binary search tree and how to insert in and search inside it.
 
-## Approach & Efficiency
-Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.
+## white Boards
+Tree Max:
 
+![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c16.png)
+
+## Approach & Efficiency
+Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.<br>
+Find Max : Time O(n) because will walk through each node / Space : O(1) because not you recursion.
 
 ## API
 inOrder(): Traverse the left subtree, root, Traverse the right subtree.<br>
@@ -16,3 +21,5 @@ preOrder(): Root, Traverse the left subtree,Traverse the right subtree.<br>
 add(): Add new node to the tree.<br>
 traverse(): check the value from add() to put it in the right place.<br>
 search(): search if the key inside the tree or not return boolean.<br>
+
+findMax() : Search for the maximum number in tree.

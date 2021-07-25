@@ -9,33 +9,6 @@ public class BinaryTree {
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
 
 
-
-
-    public int findMax() {
-        int temp = getRoot().key;
-        int temp1 = 0;
-        int temp2 = 0;
-        while (Root != null) {
-            if (Root.getLeft().key > Root.getRight().key) {
-                Root = Root.getLeft();
-                temp1 = Root.key;
-            }  if (Root.getLeft().key < Root.getRight().key) {
-                Root = Root.getRight();
-                temp2 = Root.key;
-            }
-            if (temp1 > temp2) {
-                return temp1;
-            } else {
-                return temp2;
-            }
-
-        }
-        return temp;
-    }
-
-
-
-
     public void inOrder(Node node){
         if(node != null){
             inOrder(node.getLeft());
@@ -53,7 +26,6 @@ public class BinaryTree {
             postOrderArr.add(node.key);
         }
     }
-
     public void preOrder(Node node) {
         if (node != null) {
 
@@ -62,6 +34,26 @@ public class BinaryTree {
             preOrder(node.getLeft());
             preOrder(node.getRight());
         }
+    }
+    public int findMax() {
+        int temp = getRoot().key;
+        int temp1 = 0;
+        int temp2 = 0;
+        while (Root != null) {
+            if (Root.getLeft().key > Root.getRight().key) {
+                Root = Root.getLeft();
+                temp1 = Root.key;
+            }  if (Root.getLeft().key < Root.getRight().key) {
+                Root = Root.getRight();
+                temp2 = Root.key;
+            }
+            if (temp1 > temp2) {
+                return temp1;
+            } else {
+                return temp2;
+            }
+        }
+        return temp;
     }
 
     public Node getRoot() {
