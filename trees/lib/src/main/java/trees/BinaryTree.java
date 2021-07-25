@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class BinaryTree {
     Node Root;
-
     public ArrayList<Integer> preOrderArr = new ArrayList<>();
     public ArrayList<Integer> inOrderArr = new ArrayList<>();
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
+
 
     public void inOrder(Node node){
         if(node != null){
@@ -26,7 +26,6 @@ public class BinaryTree {
             postOrderArr.add(node.key);
         }
     }
-
     public void preOrder(Node node) {
         if (node != null) {
 
@@ -36,6 +35,27 @@ public class BinaryTree {
             preOrder(node.getRight());
         }
     }
+    public int findMax() {
+        int temp = getRoot().key;
+        int temp1 = 0;
+        int temp2 = 0;
+        while (Root != null) {
+            if (Root.getLeft().key > Root.getRight().key) {
+                Root = Root.getLeft();
+                temp1 = Root.key;
+            }  if (Root.getLeft().key < Root.getRight().key) {
+                Root = Root.getRight();
+                temp2 = Root.key;
+            }
+            if (temp1 > temp2) {
+                return temp1;
+            } else {
+                return temp2;
+            }
+        }
+        return temp;
+    }
+
     public Node getRoot() {
         return Root;
     }

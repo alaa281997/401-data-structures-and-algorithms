@@ -62,4 +62,16 @@ public class LibraryTest {
         bt.inOrder(bt.getRoot());
         assertEquals("[4, 2, 5, 1, 3]",String.valueOf(bt.getInOrderArr()));
     }
+
+    @Test
+    public void findMaxTest() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.setRoot(new Node(1));
+        binaryTree.getRoot().setLeft(new Node(190));
+        binaryTree.getRoot().setRight(new Node(130));
+        binaryTree.getRoot().getLeft().setLeft(new Node(4));
+        binaryTree.getRoot().getLeft().setRight(new Node(200));
+
+        assertEquals("200",String.valueOf(binaryTree.findMax()));
+    }
 }
