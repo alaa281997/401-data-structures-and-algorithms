@@ -11,7 +11,7 @@ Tree Max:
 
 ## Approach & Efficiency
 Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.<br>
-Find Max : Time O(n) because will walk through each node / Space : O(1) because not you recursion.
+Find Max : Time O(n) because will walk through each node / Space : O(n) because use recursion.
 
 ## API
 inOrder(): Traverse the left subtree, root, Traverse the right subtree.<br>
