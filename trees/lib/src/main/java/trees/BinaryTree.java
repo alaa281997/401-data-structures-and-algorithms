@@ -1,9 +1,12 @@
 package main.java.trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree {
     Node Root;
+
     public ArrayList<Integer> preOrderArr = new ArrayList<>();
     public ArrayList<Integer> inOrderArr = new ArrayList<>();
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
@@ -35,26 +38,36 @@ public class BinaryTree {
             preOrder(node.getRight());
         }
     }
-    public int findMax() {
-        int temp = getRoot().key;
-        int temp1 = 0;
-        int temp2 = 0;
-        while (Root != null) {
-            if (Root.getLeft().key > Root.getRight().key) {
-                Root = Root.getLeft();
-                temp1 = Root.key;
-            }  if (Root.getLeft().key < Root.getRight().key) {
-                Root = Root.getRight();
-                temp2 = Root.key;
-            }
-            if (temp1 > temp2) {
-                return temp1;
-            } else {
-                return temp2;
-            }
+    int max;
+    public int findMax(){
+
+        if (Root == null) {
+            System.out.println("Empty Tree");
         }
-        return temp;
+        Node temp = Root;
+        max = temp.getKey();
+
+        if (temp.getLeft() != null) {
+            traverse(temp.getLeft());
+        }
+        if (temp.getRight() != null) {
+            traverse(temp.getRight());
+        }
+        return max;
     }
+
+    private void traverse(Node node) {
+        if (node.getKey() > max) {
+            max = node.getKey();
+        }
+        if (node.getLeft() != null) {
+            traverse(node.getLeft());
+        }
+        if (node.getRight() != null) {
+            traverse(node.getRight());
+        }
+    }
+
 
     public Node getRoot() {
         return Root;
