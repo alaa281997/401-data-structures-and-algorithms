@@ -2,7 +2,6 @@ package main.java.trees;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class BinaryTree {
     Node Root;
@@ -10,7 +9,8 @@ public class BinaryTree {
     public ArrayList<Integer> preOrderArr = new ArrayList<>();
     public ArrayList<Integer> inOrderArr = new ArrayList<>();
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
-
+    public LinkedList<Node> linkedList = new LinkedList<>();
+    public  ArrayList<Integer> list = new ArrayList<>();
 
     public void inOrder(Node node){
         if(node != null){
@@ -68,6 +68,24 @@ public class BinaryTree {
         }
     }
 
+
+    public ArrayList<Integer> breadthFirst(BinaryTree tree) {
+        if (Root != null) {
+            linkedList.add(tree.Root);
+            while (!linkedList.isEmpty()) {
+                Node node = linkedList.remove();
+                list.add(node.key);
+
+                if (node.getLeft() != null) {
+                    linkedList.add(node.getLeft());
+                }
+                if (node.getRight() != null) {
+                    linkedList.add(node.getRight());
+                }
+            }
+        }
+        return list;
+    }
 
     public Node getRoot() {
         return Root;
