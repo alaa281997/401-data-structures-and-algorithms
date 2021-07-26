@@ -14,8 +14,8 @@ public class App {
         binaryTree.getRoot().getRight().setLeft(new Node(60));
         binaryTree.getRoot().getRight().setRight(new Node(70));
 
-
-        System.out.println(binaryTree.findMax());
+         binaryTree.breadthFirst(binaryTree);
+        //System.out.println(binaryTree.findMax());
         //System.out.println(binaryTree.traverseLevelOrder(binaryTree));
        // System.out.println(binaryTree.findMax());
 //          //inOrder

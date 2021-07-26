@@ -9,9 +9,15 @@ Tree Max:
 
 ![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c16.png)
 
+breadth First:
+
+![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c17.png)
+
 ## Approach & Efficiency
 Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.<br>
 Find Max : Time O(n) because will walk through each node / Space : O(n) because use recursion.
+
+breadthFirst :Space and Time O(n) check each node using linked list and array list.
 
 ## API
 inOrder(): Traverse the left subtree, root, Traverse the right subtree.<br>
@@ -23,3 +29,5 @@ traverse(): check the value from add() to put it in the right place.<br>
 search(): search if the key inside the tree or not return boolean.<br>
 
 findMax() : Search for the maximum number in tree.
+
+breadthFirst():Algorithm traverses a nodes and uses a linked list to get the next vertex to start a search.

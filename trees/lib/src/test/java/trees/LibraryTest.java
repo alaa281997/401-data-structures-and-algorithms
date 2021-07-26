@@ -74,4 +74,17 @@ public class LibraryTest {
 
         assertEquals("200",String.valueOf(binaryTree.findMax()));
     }
+
+    @Test
+    public void breadthFirstTest() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.setRoot(new Node(1));
+        binaryTree.getRoot().setLeft(new Node(190));
+        binaryTree.getRoot().setRight(new Node(130));
+        binaryTree.getRoot().getLeft().setLeft(new Node(4));
+        binaryTree.getRoot().getLeft().setRight(new Node(200));
+
+
+        assertEquals("[1, 190, 130, 4, 200]",String.valueOf(binaryTree.breadthFirst(binaryTree)));
+    }
 }
