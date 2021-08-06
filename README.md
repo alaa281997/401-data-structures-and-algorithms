@@ -11,4 +11,4 @@
 |binary Search   | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/array-binary-search)  |  
 |Linked List   | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/linked-list)  | 
 |Stack and Queue   | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/linked-list)  | 
-|Trees   | [URL]()  | 
+|Trees   | [URL](https://github.com/alaa281997/401-data-structures-and-algorithms/tree/tree-fizz-buzz/trees)  | 
