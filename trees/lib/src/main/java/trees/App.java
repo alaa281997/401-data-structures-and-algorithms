@@ -1,6 +1,9 @@
 package main.java.trees;
 
 
+import main.java.trees.kAryTree.KAryNode;
+import main.java.trees.kAryTree.KaryTree;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +27,8 @@ public class App {
         binaryTree1.getRoot().getRight().setLeft(new Node(8));
         //  binaryTree1.getRoot().getRight().setRight(new Node(9));
 
-        System.out.println(binaryTree.CheckTrees(binaryTree, binaryTree1));
-        binaryTree.odd(binaryTree);
+//        System.out.println(binaryTree.CheckTrees(binaryTree, binaryTree1));
+//        binaryTree.odd(binaryTree);
 
         //System.out.println(binaryTree.findMax());
         //System.out.println(binaryTree.traverseLevelOrder(binaryTree));
@@ -46,6 +49,21 @@ public class App {
 //        System.out.println(bst.Search(9));
 //        System.out.println(bst);
 
+
+        KaryTree<Integer> tree = new KaryTree(3);
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        tree.add(4);
+        tree.add(5);
+        tree.add(6);
+        tree.add(7);
+        tree.add(8);
+        tree.add(9);
+        tree.add(30);
+        System.out.println(tree);
+
+        System.out.println(tree.fizzBuzzTree(tree));
 
     }
 }
