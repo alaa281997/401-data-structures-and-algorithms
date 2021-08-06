@@ -1,23 +1,35 @@
 package main.java.trees;
 
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
         System.out.println("Binary search");
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.setRoot(new Node(1));
-        binaryTree.getRoot().setLeft(new Node(40));
-        binaryTree.getRoot().setRight(new Node(10));
-        binaryTree.getRoot().getLeft().setLeft(new Node(4));
-        binaryTree.getRoot().getLeft().setRight(new Node(50));
-        binaryTree.getRoot().getRight().setLeft(new Node(60));
-        binaryTree.getRoot().getRight().setRight(new Node(70));
+        binaryTree.getRoot().setLeft(new Node(3));
+        binaryTree.getRoot().setRight(new Node(4));
+        binaryTree.getRoot().getLeft().setLeft(new Node(5));
+        binaryTree.getRoot().getLeft().setRight(new Node(7));
+        binaryTree.getRoot().getRight().setLeft(new Node(8));
+        binaryTree.getRoot().getRight().setRight(new Node(9));
+        BinaryTree binaryTree1 = new BinaryTree();
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeft(new Node(3));
+        binaryTree1.getRoot().setRight(new Node(4));
+        binaryTree1.getRoot().getLeft().setLeft(new Node(5));
+        binaryTree1.getRoot().getLeft().setRight(new Node(7));
+        binaryTree1.getRoot().getRight().setLeft(new Node(8));
+        //  binaryTree1.getRoot().getRight().setRight(new Node(9));
 
-         binaryTree.breadthFirst(binaryTree);
+        System.out.println(binaryTree.CheckTrees(binaryTree, binaryTree1));
+        binaryTree.odd(binaryTree);
+
         //System.out.println(binaryTree.findMax());
         //System.out.println(binaryTree.traverseLevelOrder(binaryTree));
-       // System.out.println(binaryTree.findMax());
+        // System.out.println(binaryTree.findMax());
 //          //inOrder
 //          binaryTree.inOrder(binaryTree.getRoot());
 //          //postOrder
@@ -25,7 +37,7 @@ public class App {
 //          //preOrder
 //         binaryTree.preOrder(binaryTree.getRoot());
 //        System.out.println("lll");
- //       System.out.println(binaryTree);
+        //       System.out.println(binaryTree);
 //        BinarySearchTree bst = new BinarySearchTree();
 //        bst.add(5);
 //        bst.add(7);
@@ -33,6 +45,7 @@ public class App {
 //        bst.add(18);
 //        System.out.println(bst.Search(9));
 //        System.out.println(bst);
+
 
     }
 }

@@ -11,6 +11,7 @@ public class BinaryTree {
     public ArrayList<Integer> postOrderArr = new ArrayList<>();
     public LinkedList<Node> linkedList = new LinkedList<>();
     public  ArrayList<Integer> list = new ArrayList<>();
+    public ArrayList<Integer> even = new ArrayList<>();
 
     public void inOrder(Node node){
         if(node != null){
@@ -68,6 +69,53 @@ public class BinaryTree {
         }
     }
 
+    LinkedList<Node> linkedList1 = new LinkedList<>();
+    ArrayList<Integer> list1 = new ArrayList<>();
+
+    public ArrayList<Integer> odd(BinaryTree tree) {
+        if (Root != null) {
+            linkedList1.add(tree.Root);
+            while (!linkedList1.isEmpty()) {
+                Node node = linkedList1.remove();
+
+                    list1.add(node.key);
+
+                if (node.getLeft() != null) {
+                        linkedList1.add(node.getLeft());
+                 }
+
+                if (node.getRight() != null) {
+
+                    linkedList1.add(node.getRight()); }
+            }
+            for (int i = 0; i < list1.size() ; i++) {
+                if(list1.get(i) % 2 != 0){
+                    even.add(list1.get(i));
+                }
+            }
+        }
+        System.out.println(even);
+        return list1;
+    }
+
+    public int getFilesNum() {
+        return getFilesNum(getRoot());
+    }
+
+    public static boolean CheckTrees(BinaryTree tree1, BinaryTree tree2) {
+        int num1 = tree1.getFilesNum();
+        int num2 = tree2.getFilesNum();
+        return num1 == num2;
+    }
+
+    public int getFilesNum(Node node) {
+        if (node == null)
+            return 0;
+        if (node.getLeft() == null && node.getRight() == null)
+            return 1;
+        else
+            return getFilesNum(node.getLeft()) + getFilesNum(node.getRight());
+    }
 
     public ArrayList<Integer> breadthFirst(BinaryTree tree) {
         if (Root != null) {
