@@ -7,15 +7,15 @@ We need to use our knowledge to create binary tree and binary search tree and ho
 ## white Boards
 Tree Max:
 
-![](trees/img/c16.png)
+![](c16.png)
 
 breadth First:
 
-![](trees/img/c17.png)
+![](c17.png)
 
 Fizz Buzz:
 
-![](trees/img/c18.png)
+![](c18.png)
 
 ## Approach & Efficiency
 Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.<br>
