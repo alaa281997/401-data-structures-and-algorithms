@@ -5,6 +5,7 @@ package test.java.trees;
 
 import main.java.trees.BinaryTree;
 import main.java.trees.Node;
+import main.java.trees.kAryTree.KaryTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -86,5 +87,24 @@ public class LibraryTest {
 
 
         assertEquals("[1, 190, 130, 4, 200]",String.valueOf(binaryTree.breadthFirst(binaryTree)));
+    }
+
+
+    @Test
+    public void FizzBuzzTest() {
+
+        KaryTree<Integer> tree = new KaryTree(3);
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        tree.add(4);
+        tree.add(5);
+        tree.add(6);
+        tree.add(7);
+        tree.add(8);
+        tree.add(9);
+        tree.add(30);
+
+        assertEquals("{  1   2   Buzz    Fizz    7     Fizz   8    Fizz    FizzBuzz     4   }",String.valueOf(tree.fizzBuzzTree(tree)));
     }
 }
