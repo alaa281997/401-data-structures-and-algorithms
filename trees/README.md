@@ -7,15 +7,15 @@ We need to use our knowledge to create binary tree and binary search tree and ho
 ## white Boards
 Tree Max:
 
-![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c16.png)
+![](trees/img/c16.png)
 
 breadth First:
 
-![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c17.png)
+![](trees/img/c17.png)
 
 Fizz Buzz:
 
-![](C:\Users\User\IdeaProjects\401-data-structures-and-algorithms\trees\img\c18.png)
+![](trees/img/c18.png)
 
 ## Approach & Efficiency
 Binary tree and binary search tree: O(n) Where n is the number of nodes on one side of root.<br>
