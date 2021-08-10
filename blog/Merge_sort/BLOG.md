@@ -1,0 +1,53 @@
+# Insertion Sort
+> Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands.
+
+
+# Pseudocode
+```
+
+ALGORITHM Mergesort(arr)
+    DECLARE n <-- arr.length
+
+    if n > 1
+      DECLARE mid <-- n/2
+      DECLARE left <-- arr[0...mid]
+      DECLARE right <-- arr[mid...n]
+      // sort the left side
+      Mergesort(left)
+      // sort the right side
+      Mergesort(right)
+      // merge the sorted left and right sides together
+      Merge(left, right, arr)
+
+ALGORITHM Merge(left, right, arr)
+    DECLARE i <-- 0
+    DECLARE j <-- 0
+    DECLARE k <-- 0
+
+    while i < left.length && j < right.length
+        if left[i] <= right[j]
+            arr[k] <-- left[i]
+            i <-- i + 1
+        else
+            arr[k] <-- right[j]
+            j <-- j + 1
+
+        k <-- k + 1
+
+    if i = left.length
+       set remaining entries in arr to remaining values in right
+    else
+       set remaining entries in arr to remaining values in left
+
+```
+
+# Trace
+
+![Trace](c27.png)
+
+
+## Efficency
+> code challenge 26 <br>
+  time: O(logn)<br>
+  Space: O(n)
+ 
