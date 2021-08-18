@@ -5,6 +5,8 @@ package test.java.HashTable;
 
 import main.java.HashTable.HashTable;
 import org.junit.Test;
+
+import static main.java.HashTable.FirstRepeated.findFirstRepeated;
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -31,5 +33,17 @@ public class AppTest {
         hashList.add("B", 2);
         assertEquals(2,hashList.getSize());
 
+    }
+
+
+    @Test
+    public void TestRepeated() {
+        String string="It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
+        assertEquals("summer",findFirstRepeated(string));
+    }
+    @Test
+    public void TestNotRepeated() {
+        String string="The Capital city of Jordan is Amman";
+        assertEquals("Not Repeated",findFirstRepeated(string));
     }
 }
