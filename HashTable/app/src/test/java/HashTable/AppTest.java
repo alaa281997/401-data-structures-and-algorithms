@@ -3,10 +3,18 @@
  */
 package test.java.HashTable;
 
+import main.java.HashTable.FirstRepeated;
 import main.java.HashTable.HashTable;
+import main.java.HashTable.HashTree.BinaryTree;
+import main.java.HashTable.HashTree.NodeItem;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import static main.java.HashTable.FirstRepeated.findFirstRepeated;
+import static main.java.HashTable.FirstRepeated.leftJoin;
 import static org.junit.Assert.*;
 
 public class AppTest {
@@ -46,4 +54,65 @@ public class AppTest {
         String string="The Capital city of Jordan is Amman";
         assertEquals("Not Repeated",findFirstRepeated(string));
     }
+
+    @Test
+    public void TestIntersectionTree(){
+
+        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
+        BinaryTree binaryTree1 = new BinaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        binaryTree1.setRoot(new NodeItem(150));
+        binaryTree1.getRoot().setLeft(new NodeItem(100));
+        binaryTree1.getRoot().setRight(new NodeItem(250));
+        binaryTree1.getRoot().getRight().setLeft(new NodeItem(200));
+        binaryTree1.getRoot().getRight().setRight(new NodeItem(350));
+
+        binaryTree2.setRoot(new NodeItem(42));
+        binaryTree2.getRoot().setLeft(new NodeItem(100));
+        binaryTree2.getRoot().setRight(new NodeItem(600));
+        binaryTree2.getRoot().getRight().setLeft(new NodeItem(200));
+        binaryTree2.getRoot().getRight().setRight(new NodeItem(350));
+
+        assertEquals("[100, 200, 350]", binaryTree1.treeIntersection(binaryTree1,binaryTree2).toString());
+
+    }
+    @Test
+    public void testLeftWithJoins(){
+        HashMap hash1 = new HashMap();
+        hash1.put("fond", "enamored");
+        hash1.put("wrath", "anger");
+        hash1.put("flow", "jam");
+
+        HashMap hash2 = new HashMap();
+        hash2.put("fond", "averse");
+        hash2.put("wrath", "delight");
+        hash2.put("flow", "test");
+
+    }
+
+    @Test
+    public void testHashMap(){
+        HashMap hash1 = new HashMap();
+        hash1.put("fond", "enamored");
+        hash1.put("wrath", "anger");
+        hash1.put("diligent", "employed");
+        hash1.put("outfit", "garb");
+        hash1.put("guide", "usher");
+
+        HashMap hash2 = new HashMap();
+
+        assertEquals("[diligent: employed, null, outfit: garb, null, wrath: anger, null, guide: usher, null, fond: enamored, null]", leftJoin(hash1, hash2).toString());
+    }
+
+    @Test
+    public void testEmptyHashMap(){
+        HashMap hash1 = new HashMap();
+        HashMap hash2 = new HashMap();
+
+        assertEquals("[]", leftJoin(hash1, hash2).toString());
+
+    }
+
 }
+

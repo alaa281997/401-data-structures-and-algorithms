@@ -3,20 +3,12 @@
  */
 package main.java.HashTable;
 
+import java.util.HashMap;
+
 import static main.java.HashTable.FirstRepeated.findFirstRepeated;
 
 public class App {
     public static void main(String[] args) {
-//        HashTable<String, Integer> hashList = new HashTable<>();
-//        hashList.add("A", 1);
-//        hashList.add("B", 2);
-//        hashList.add("C", 3);
-//        hashList.add("D", 4);
-//
-//        System.out.println("The size is => " + hashList.getSize());
-//        System.out.println("The B allowance is => " + hashList.get("B"));
-//        System.out.println("Contain ss => " + hashList.contains("ss"));
-//        System.out.println("The size is => " + hashList.getSize());
 
         String s1 = "Once a upon time, there was a brave princess who";
         String s2= "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...";
@@ -27,5 +19,23 @@ public class App {
         System.out.println("First repeated word is :" + findFirstRepeated(s2));
         System.out.println("First repeated word is :" + findFirstRepeated(s3));
 
+
+
+        HashMap<String, String> HashMap1 = new HashMap<>();
+        HashMap<String, String> HashMap2 = new HashMap<>();
+
+        HashMap1.put("fond", "enamored");
+        HashMap1.put("wrath", "anger");
+        HashMap1.put("diligent", "employed");
+        HashMap1.put("outfit", "garb");
+        HashMap1.put("guide", "usher");
+
+        HashMap2.put("fond", "averse");
+        HashMap2.put("wrath", "delight");
+        HashMap2.put("diligent", "idle");
+        HashMap2.put("guide", "follow");
+        HashMap2.put("flow", "jam");
+        FirstRepeated hash = new FirstRepeated();
+        System.out.println(hash.leftJoin(HashMap1, HashMap2));
     }
 }
