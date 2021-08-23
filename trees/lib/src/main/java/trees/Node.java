@@ -1,5 +1,7 @@
 package main.java.trees;
 
+import main.java.HashTable.HashTree.NodeItem;
+
 public class Node {
     int key;
     private Node left;
@@ -38,5 +40,11 @@ public class Node {
         return "Node{" +
                 "key=" + key +
                 '}';
+    }
+
+    public void setLeft(NodeItem node) {
+    }
+
+    public void setRight(NodeItem node) {
     }
 }

@@ -4,6 +4,8 @@
 package test.java.HashTable;
 
 import main.java.HashTable.HashTable;
+import main.java.HashTable.HashTree.BinaryTree;
+import main.java.HashTable.HashTree.NodeItem;
 import org.junit.Test;
 
 import static main.java.HashTable.FirstRepeated.findFirstRepeated;
@@ -46,4 +48,28 @@ public class AppTest {
         String string="The Capital city of Jordan is Amman";
         assertEquals("Not Repeated",findFirstRepeated(string));
     }
+
+    @Test
+    public void TestIntersectionTree(){
+
+        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
+        BinaryTree binaryTree1 = new BinaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        binaryTree1.setRoot(new NodeItem(150));
+        binaryTree1.getRoot().setLeft(new NodeItem(100));
+        binaryTree1.getRoot().setRight(new NodeItem(250));
+        binaryTree1.getRoot().getRight().setLeft(new NodeItem(200));
+        binaryTree1.getRoot().getRight().setRight(new NodeItem(350));
+
+        binaryTree2.setRoot(new NodeItem(42));
+        binaryTree2.getRoot().setLeft(new NodeItem(100));
+        binaryTree2.getRoot().setRight(new NodeItem(600));
+        binaryTree2.getRoot().getRight().setLeft(new NodeItem(200));
+        binaryTree2.getRoot().getRight().setRight(new NodeItem(350));
+
+        assertEquals("[100, 200, 350]", binaryTree1.treeIntersection(binaryTree1,binaryTree2).toString());
+
+    }
 }
+

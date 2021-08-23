@@ -1,4 +1,7 @@
 package main.java.linked.list;
+
+import java.util.ArrayList;
+
 public class LinkedList <T>{
     public Node<T>  head;
     public int size;
@@ -129,7 +132,8 @@ public class LinkedList <T>{
         return zipLists;
     }
 
-    
+
+
     public String toString(){
         String result = "";
         Node n = head;
