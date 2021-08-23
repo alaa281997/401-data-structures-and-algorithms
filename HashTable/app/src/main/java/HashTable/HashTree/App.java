@@ -37,8 +37,6 @@ public class App {
 
       System.out.println(binaryTree1.treeIntersection(binaryTree1, binaryTree2));
 
-
-
     }
 
 }

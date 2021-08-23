@@ -19,12 +19,14 @@ Lab 33:
 
 ![](c33.png)
 
+
 ## Approach & Efficiency
 Lab 31 :Big O(n) time and space because will walk through each element in linked list 
 
 Lab 32 : Big O(n) time and space because there is recursion
 
 Lab 33 : Big O(n) time and space because keep looping 
+
 
 ## API
 add()-> to add to list
@@ -40,6 +42,9 @@ hash()-> returns Index in the collection for that key
 
 findFirstRepeated()-> returns the first repeated word
 
+
 treeIntersection()-> compare two binary tree and find the similar nodes
 
 leftJoin()-> LEFT JOINs accept two hashmaps into a single list
+treeIntersection()-> compare two binary tree and find the similar nodes
+
