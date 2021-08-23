@@ -1,6 +1,8 @@
 package main.java.HashTable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 public class FirstRepeated {
@@ -21,4 +23,17 @@ public class FirstRepeated {
 
         return "Not Repeated";
   }
+    public static List<String> leftJoin(HashMap hash1, HashMap hash2){
+
+        List<String> list = new ArrayList<>();
+        for(Object o : hash1.keySet()){
+            if(hash1.containsKey(o)){
+                list.add(o +  ": " + hash1.get(o)+ ", " + hash2.get(o));
+            } else{
+                list.add(o + ": " + hash1.get(o) + ", " + null);
+            }
+        }
+
+        return list;
+    }
 }
