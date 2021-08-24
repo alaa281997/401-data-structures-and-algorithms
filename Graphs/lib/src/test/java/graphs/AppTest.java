@@ -101,6 +101,30 @@ public class AppTest {
         assertEquals("Vertex{label='A'}[]Vertex{label='D'}[]", graph.printGraph());
     }
 
+    @Test
+    public void TestBreadthFirst(){
+
+        Graph graph = new Graph();
+
+        graph.addVertex("Pandora");
+        graph.addVertex("Arendelle");
+        graph.addVertex("Metroville");
+        graph.addVertex("Monstroplolis");
+        graph.addVertex("Narnia");
+        graph.addVertex("Naboo");
+
+        graph.addEdge("Pandora", "Arendelle");
+        graph.addEdge("Arendelle", "Metroville");
+        graph.addEdge("Arendelle", "Monstroplolis");
+        graph.addEdge("Metroville", "Narnia");
+        graph.addEdge("Metroville", "Naboo");
+        graph.addEdge("Metroville", "Monstroplolis");
+        graph.addEdge("Monstroplolis", "Naboo");
+        graph.addEdge("Narnia", "Naboo");
+
+        assertEquals("[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]", graph.breadthTraverse("Pandora").toString());
+    }
+
 
 }
 

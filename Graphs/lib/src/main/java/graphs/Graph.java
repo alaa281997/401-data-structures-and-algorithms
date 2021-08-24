@@ -78,7 +78,7 @@ public class Graph {
         return visited;
     }
     // 36
-    Set<String> breadthTraverse( String root) {
+    public Set<String> breadthTraverse(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Queue<String> queue = new LinkedList<>();
         queue.add(root);
