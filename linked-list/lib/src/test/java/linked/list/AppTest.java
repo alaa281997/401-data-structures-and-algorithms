@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static main.java.linked.list.LinkedList.zipLists;
 import static org.junit.Assert.*;
 
-public class LibraryTest {
+public class AppTest {
 
     @Test
     public void testEmpty() {

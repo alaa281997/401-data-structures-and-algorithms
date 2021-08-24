@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/linked-list/lib/src" isTestSource="false" />
@@ -10,6 +10,8 @@
       <sourceFolder url="file://$MODULE_DIR$/blog/Insertion-Sort/lib/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/blog/Merge_sort/app/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HashTable/app/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Graph/app/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Graph/lib/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
