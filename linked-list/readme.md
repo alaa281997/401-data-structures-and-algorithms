@@ -1,6 +1,7 @@
-# Singly Linked List
-Singly linked list can be defined as the collection of ordered set of elements.
+# Linked List
+A linked list is a sequence of data structures, which are connected together via links.
 
+Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array.
 
 ## Challenge
 Challenge 5 about create linked list and how to insert elements in list and searching if the element inside the list <br>
@@ -25,7 +26,7 @@ Code challenge 8:
 
 
 
-
+# API
 Insert(): to insert nw node in the list.
 Search(): to check if the element inside the list.
 toString(): override method to returns a String representation.
