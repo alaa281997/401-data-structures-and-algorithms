@@ -5,6 +5,11 @@ A Graph in the data structure can be termed as a data structure consisting of da
 ## Challenge
 Implement the Graph. The graph should be represented as an adjacency list.
 
+## White Board
+Lab 36:
+
+![](c36.png)
+
 
 ## Approach & Efficiency
 addVertex(): it is O(1) for both time and space complexity.
@@ -14,7 +19,6 @@ addEdge(): it is O(1) for both time and space complexity.
 neighbors(): it is O(n) for both time complexity and space complexity.
 
 size(): it is O(n) for time complexity and O(1) for space complexity.
-
 
 ## API
 addVertex(): to add vertex.
@@ -28,3 +32,5 @@ removeEdge(): remove the relation.
 neighbors(): Returns a collection of edges connected to the given node Include the weight of the connection in the returned collection
 
 size(): Returns the total number of nodes in the graph.
+
+breadthTraverse(): Return a set of nodes in the order they were visited.
