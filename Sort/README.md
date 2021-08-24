@@ -1,6 +1,5 @@
-# Insertion Sort
-Insertion sort is a simple sorting algorithm that builds the final sorted array one item at a time.
-
+# Sort
+A Sorting Algorithm is used to rearrange a given array or list elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of element in the respective data structure.
 ## Whiteboard Process
 Lab 26:
 
@@ -21,5 +20,3 @@ Lab 27:
    Space: O(n)
  
 
-## Solution
- > [4, 8, 15, 16, 23, 42]
