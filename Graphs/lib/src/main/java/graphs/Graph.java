@@ -95,6 +95,40 @@ public class Graph {
         return visited;
     }
 
+
+    // c37
+    public void addEdgeWithWeight(String data1, String data2, int weight) {
+        Vertex ver1 = new Vertex(data1, weight);
+        Vertex ver2 = new Vertex(data2, weight);
+        adjVertices.get(ver1).add(ver2);
+        adjVertices.get(ver2).add(ver1);
+    }
+
+    int cost;
+    public Integer businessTrip(Graph graph, List<String> cities){
+        cost = 0;
+        int citiesSize = cities.size();
+
+        for (int i = 0; i < citiesSize - 1; i ++){
+
+            path(cities.get(i), cities.get(i + 1), graph);
+        }
+
+        return cost;
+    }
+
+    private void path(String city1, String city2, Graph graph){
+
+        if (graph.getNeighbors(city1) == null){
+            return;
+        }
+        for (Vertex vertex: graph.getNeighbors(city1)) {
+            if (Objects.equals(city2, vertex.data)){
+                cost += vertex.weight;
+            }
+        }
+    }
+
     public List<Vertex> getNeighbors(String data) {
         return adjVertices.get(new Vertex(data));
     }

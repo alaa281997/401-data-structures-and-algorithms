@@ -6,10 +6,13 @@ A Graph in the data structure can be termed as a data structure consisting of da
 Implement the Graph. The graph should be represented as an adjacency list.
 
 ## White Board
-Lab 36:
+Code challenge 36:
 
 ![](c36.png)
 
+Code challenge 37:
+
+![](c37.png)
 
 ## Approach & Efficiency
 addVertex(): it is O(1) for both time and space complexity.
@@ -34,3 +37,4 @@ neighbors(): Returns a collection of edges connected to the given node Include t
 size(): Returns the total number of nodes in the graph.
 
 breadthTraverse(): Return a set of nodes in the order they were visited.
+
