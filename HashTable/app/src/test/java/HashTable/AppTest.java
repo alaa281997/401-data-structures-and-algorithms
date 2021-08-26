@@ -77,6 +77,7 @@ public class AppTest {
         assertEquals("[100, 200, 350]", binaryTree1.treeIntersection(binaryTree1,binaryTree2).toString());
 
     }
+
     @Test
     public void testLeftWithJoins(){
         HashMap hash1 = new HashMap();
