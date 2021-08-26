@@ -14,6 +14,9 @@ Code challenge 37:
 
 ![](c37.png)
 
+Code challenge 38:
+
+![](c38.png)
 ## Approach & Efficiency
 addVertex(): it is O(1) for both time and space complexity.
 
@@ -38,3 +41,4 @@ size(): Returns the total number of nodes in the graph.
 
 breadthTraverse(): Return a set of nodes in the order they were visited.
 
+depthFirstTraverse: Return a set of nodes in their pre-order depth-first traversal order.

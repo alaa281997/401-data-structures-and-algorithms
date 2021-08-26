@@ -129,6 +129,27 @@ public class Graph {
         }
     }
 
+
+    //c38
+    public Set<String> depthFirstTraverse(String root) {
+        Set<String> set = new LinkedHashSet<>();
+        Stack<String> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            if (!set.contains(vertex)) {
+                set.add(vertex);
+
+                for (Vertex v : getNeighbors(vertex)) {
+                    stack.push(v.data);
+                }
+            }
+        }
+
+        return set;
+    }
+
     public List<Vertex> getNeighbors(String data) {
         return adjVertices.get(new Vertex(data));
     }

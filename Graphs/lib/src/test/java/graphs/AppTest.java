@@ -14,11 +14,10 @@ import static org.junit.Assert.*;
 
 
 public class AppTest {
+    Graph graph = new Graph();
 
     @Test
     public void addVertex(){
-
-        Graph graph = new Graph();
 
         graph.addVertex("A");
         graph.addVertex("B");
@@ -29,9 +28,7 @@ public class AppTest {
 
     @Test
     public void addEdge(){
-
-        Graph graph = new Graph();
-
+        
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge("A", "B");
@@ -41,9 +38,7 @@ public class AppTest {
 
     @Test
     public void vertexNeighbors(){
-
-        Graph graph = new Graph();
-
+        
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addVertex("C");
@@ -61,17 +56,12 @@ public class AppTest {
 
     @Test
     public void emptyGraph(){
-
-        Graph graph = new Graph();
         assertEquals(0,graph.size());
         assertEquals("[]", graph.getVertices().toString());
     }
 
     @Test
     public void removeVertex(){
-
-        Graph graph = new Graph();
-
         graph.addVertex("A");
         graph.addVertex("D");
         graph.addEdge("A", "D");
@@ -84,8 +74,6 @@ public class AppTest {
     }
     @Test
     public void oneVertexAndOneEdge(){
-        Graph graph = new Graph();
-
         graph.addVertex("A");
         graph.removeEdge("A","A");
 
@@ -94,8 +82,6 @@ public class AppTest {
 
     @Test
     public void removeEdge(){
-        Graph graph = new Graph();
-
         graph.addVertex("A");
         graph.addVertex("D");
         graph.addEdge("A", "D");
@@ -107,9 +93,7 @@ public class AppTest {
 
     @Test
     public void TestBreadthFirst(){
-
-        Graph graph = new Graph();
-
+        
         graph.addVertex("Pandora");
         graph.addVertex("Arendelle");
         graph.addVertex("Metroville");
@@ -131,29 +115,75 @@ public class AppTest {
 
     @Test
     public void businessTripTest(){
+        
+        graph.addVertex("Pandora");
+        graph.addVertex("Arendelle");
+        graph.addVertex("Metroville");
+        graph.addVertex("Monstroplolis");
 
-        Graph graph2 = new Graph();
-
-        graph2.addVertex("Pandora");
-        graph2.addVertex("Arendelle");
-        graph2.addVertex("Metroville");
-        graph2.addVertex("Monstroplolis");
-
-        graph2.addEdgeWithWeight("Pandora", "Arendelle", 100);
-        graph2.addEdgeWithWeight("Arendelle", "Metroville",150);
-        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",200);
+        graph.addEdgeWithWeight("Pandora", "Arendelle", 100);
+        graph.addEdgeWithWeight("Arendelle", "Metroville",150);
+        graph.addEdgeWithWeight("Arendelle", "Monstroplolis",200);
 
         List<String> cities1 = new ArrayList<>();
         cities1.add("Pandora");
         cities1.add("Arendelle");
-        assertEquals("100", String.valueOf(graph2.businessTrip(graph2, cities1)));
+        assertEquals("100", String.valueOf(graph.businessTrip(graph, cities1)));
 
         List<String> cities2 = new ArrayList<>();
         cities2.add("Pandora");
         cities2.add("Arendelle");
         cities2.add("Monstroplolis");
-        assertEquals("300", String.valueOf(graph2.businessTrip(graph2, cities2)));
+        assertEquals("300", String.valueOf(graph.businessTrip(graph, cities2)));
 
     }
+
+
+    @Test
+    public void depthFirstTest(){
+
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+
+        graph.addEdge("A", "D");
+        graph.addEdge("A", "B");
+        graph.addEdge("B", "D");
+        graph.addEdge("B", "C");
+        graph.addEdge("C", "G");
+        graph.addEdge("D", "F");
+        graph.addEdge("D", "H");
+        graph.addEdge("D", "E");
+        graph.addEdge("F", "H");
+
+        assertEquals("[A, B, C, G, D, E, H, F]", String.valueOf(graph.depthFirstTraverse("A")));
+    }
+
+    @Test
+    public void depthFirstOneVertex(){
+        
+        graph.addVertex("A");
+
+        assertEquals("[A]", String.valueOf(graph.depthFirstTraverse("A")));
+    }
+
+
+    @Test
+    public void depthFirstTest2(){
+        
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+
+        graph.addEdge("A", "B");
+
+        assertEquals("[A, B]",String.valueOf(graph.depthFirstTraverse("A")));
+    }
+
 }
 

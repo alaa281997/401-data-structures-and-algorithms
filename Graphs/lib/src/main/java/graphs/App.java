@@ -72,7 +72,28 @@ public class App {
         cities.add("Arendelle");
         cities.add("Metroville");
 
-        System.out.println(graphs.businessTrip(graphs,cities));
+//        System.out.println(graphs.businessTrip(graphs,cities));
 
+
+        graphs.addVertex("A");
+        graphs.addVertex("B");
+        graphs.addVertex("C");
+        graphs.addVertex("D");
+        graphs.addVertex("E");
+        graphs.addVertex("F");
+        graphs.addVertex("G");
+        graphs.addVertex("H");
+
+        graphs.addEdge("A", "D");
+        graphs.addEdge("A", "B");
+        graphs.addEdge("B", "D");
+        graphs.addEdge("B", "C");
+        graphs.addEdge("C", "G");
+        graphs.addEdge("D", "F");
+        graphs.addEdge("D", "H");
+        graphs.addEdge("D", "E");
+        graphs.addEdge("F", "H");
+
+        System.out.println("Depth first ---> " + graphs.depthFirstTraverse("A"));
     }
 }
